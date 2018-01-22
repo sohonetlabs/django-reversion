@@ -91,7 +91,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='version',
             name='object_id',
-            field=models.CharField(help_text='Primary key of the model under version control.', max_length=191),
+            field=models.CharField(help_text='Primary key of the model under version control.', max_length=100),
         ),
         migrations.AlterField(
             model_name='revision',
@@ -101,7 +101,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='version',
             name='db',
-            field=models.CharField(null=True, help_text='The database the model under version control is stored in.', max_length=191),
+            field=models.CharField(null=True, help_text='The database the model under version control is stored in.', max_length=100),
         ),
         migrations.RunPython(de_dupe_version_table),
         migrations.RunPython(set_version_db),
