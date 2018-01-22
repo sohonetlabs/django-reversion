@@ -191,7 +191,7 @@ class Version(models.Model):
     )
 
     object_id = models.CharField(
-        max_length=191,
+        max_length=100,
         help_text="Primary key of the model under version control.",
     )
 
@@ -216,7 +216,7 @@ class Version(models.Model):
     )
 
     db = models.CharField(
-        max_length=191,
+        max_length=100,
         help_text="The database the model under version control is stored in.",
     )
 
